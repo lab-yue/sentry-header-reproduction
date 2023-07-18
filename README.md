@@ -4,6 +4,12 @@ reproduction of https://github.com/getsentry/sentry-javascript/issues/6077#issue
 
 ## Setup
 
+NOTE: the default port for reproduction is `5173`
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lab-yue/sentry-header-reproduction)
+
+or
+
 - pnpm i
 - pnpm dev
 
