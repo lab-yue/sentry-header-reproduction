@@ -16,9 +16,10 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
   res.header("Access-Control-Expose-Headers", "Content-Length");
+  // Option 1: Allow `sentry-trace` and `baggage` headers in your CORS response headers:
   res.header(
     "Access-Control-Allow-Headers",
-    "Accept, Authorization, Content-Type, X-Requested-With, Range"
+    "Accept, Authorization, Content-Type, X-Requested-With, Range, baggage, sentry-trace"
   );
 
   if (req.method === "OPTIONS") {
