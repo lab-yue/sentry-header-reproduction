@@ -7,7 +7,7 @@ import * as Sentry from "@sentry/browser";
  *
  * Access to fetch at 'http://localhost:3000/real-download-path' (redirected from 'http://localhost:5173/api/download') from origin 'http://localhost:5173' has been blocked by CORS policy: Request header field baggage is not allowed by Access-Control-Allow-Headers in preflight response.
  */
-const WITH_SENTRY = false;
+const WITH_SENTRY = true;
 
 if (WITH_SENTRY) {
   Sentry.init({
@@ -18,6 +18,8 @@ if (WITH_SENTRY) {
     // We recommend adjusting this value in production, or using tracesSampler
     // for finer control
     tracesSampleRate: 1.0,
+    // Option 2: Disable distributed tracing. You can also make this more fine-grained and only include some domains via regex or string.include matching.
+    // tracePropagationTargets: []
   });
 }
 
